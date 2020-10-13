@@ -13,7 +13,7 @@ namespace LibraryDB.Models
         public long BookId { get; set; }
         public string BookTitle { get; set; }
         public string Author { get; set; }
-        public byte[] PubYear { get; set; }
+        public DateTime PubYear { get; set; }
         public long GenId { get; set; }
         public long Id { get; set; }
 

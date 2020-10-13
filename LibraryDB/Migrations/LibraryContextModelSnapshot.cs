@@ -41,9 +41,8 @@ namespace LibraryDB.Migrations
                         .HasColumnName("ID")
                         .HasColumnType("INT");
 
-                    b.Property<byte[]>("PubYear")
-                        .IsRequired()
-                        .HasColumnType("DataTime");
+                    b.Property<DateTime>("PubYear")
+                        .HasColumnType("DateTime");
 
                     b.HasKey("BookId");
 
@@ -64,9 +63,8 @@ namespace LibraryDB.Migrations
                         .IsRequired()
                         .HasColumnType("VARCHAR(50)");
 
-                    b.Property<byte[]>("BirthDate")
-                        .IsRequired()
-                        .HasColumnType("DataTime");
+                    b.Property<DateTime>("BirthDate")
+                        .HasColumnType("DateTime");
 
                     b.Property<string>("Gender")
                         .IsRequired()
@@ -123,17 +121,15 @@ namespace LibraryDB.Migrations
                         .HasColumnName("EmpID")
                         .HasColumnType("INT");
 
-                    b.Property<byte[]>("IssueDate")
-                        .IsRequired()
-                        .HasColumnType("DataTime");
+                    b.Property<DateTime>("IssueDate")
+                        .HasColumnType("DateTime");
 
                     b.Property<int>("ReadId")
                         .HasColumnName("ReadID")
                         .HasColumnType("INT");
 
-                    b.Property<byte[]>("ReturnDate")
-                        .IsRequired()
-                        .HasColumnType("DataTime");
+                    b.Property<DateTime>("ReturnDate")
+                        .HasColumnType("DateTime");
 
                     b.HasKey("ReturnMark");
 
@@ -205,9 +201,8 @@ namespace LibraryDB.Migrations
                         .IsRequired()
                         .HasColumnType("VARCHAR(50)");
 
-                    b.Property<byte[]>("BirthDate")
-                        .IsRequired()
-                        .HasColumnType("DataTime");
+                    b.Property<DateTime>("BirthDate")
+                        .HasColumnType("DateTime");
 
                     b.Property<string>("Gender")
                         .IsRequired()

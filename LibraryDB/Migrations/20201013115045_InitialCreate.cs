@@ -55,7 +55,7 @@ namespace LibraryDB.Migrations
                 {
                     ReadID = table.Column<int>(type: "INT", nullable: false),
                     Name = table.Column<string>(type: "VARCHAR(50)", nullable: false),
-                    BirthDate = table.Column<byte[]>(type: "DateTime", nullable: false),
+                    BirthDate = table.Column<DateTime>(type: "DateTime", nullable: false),
                     Gender = table.Column<string>(type: "CHAR(5)", nullable: false),
                     Address = table.Column<string>(type: "VARCHAR(50)", nullable: false),
                     Phone = table.Column<string>(type: "VARCHAR(11)", nullable: false),
@@ -72,7 +72,7 @@ namespace LibraryDB.Migrations
                 {
                     EmpID = table.Column<int>(type: "INT", nullable: false),
                     Name = table.Column<string>(type: "VARCHAR(50)", nullable: false),
-                    BirthDate = table.Column<byte[]>(type: "DateTime", nullable: false),
+                    BirthDate = table.Column<DateTime>(type: "DateTime", nullable: false),
                     Gender = table.Column<string>(type: "CHAR(5)", nullable: false),
                     Address = table.Column<string>(type: "VARCHAR(50)", nullable: false),
                     Phone = table.Column<string>(type: "VARCHAR(11)", nullable: false),
@@ -96,7 +96,7 @@ namespace LibraryDB.Migrations
                     BookID = table.Column<int>(type: "INT", nullable: false),
                     BookTitle = table.Column<string>(type: "VARCHAR(50)", nullable: false),
                     Author = table.Column<string>(type: "VARCHAR(50)", nullable: false),
-                    PubYear = table.Column<byte[]>(type: "DateTime", nullable: false),
+                    PubYear = table.Column<DateTime>(type: "DateTime", nullable: false),
                     GenID = table.Column<int>(type: "INT", nullable: false),
                     ID = table.Column<int>(type: "INT", nullable: false)
                 },
@@ -122,8 +122,8 @@ namespace LibraryDB.Migrations
                 columns: table => new
                 {
                     ReturnMark = table.Column<string>(type: "CHAR (5)", nullable: false),
-                    IssueDate = table.Column<byte[]>(type: "DateTime", nullable: false),
-                    ReturnDate = table.Column<byte[]>(type: "DateTime", nullable: false),
+                    IssueDate = table.Column<DateTime>(type: "DateTime", nullable: false),
+                    ReturnDate = table.Column<DateTime>(type: "DateTime", nullable: false),
                     EmpID = table.Column<int>(type: "INT", nullable: false),
                     ReadID = table.Column<int>(type: "INT", nullable: false),
                     BookID = table.Column<int>(type: "INT", nullable: false)

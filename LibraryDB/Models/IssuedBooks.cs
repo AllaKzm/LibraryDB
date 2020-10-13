@@ -5,8 +5,8 @@ namespace LibraryDB.Models
 {
     public partial class IssuedBooks
     {
-        public byte[] IssueDate { get; set; }
-        public byte[] ReturnDate { get; set; }
+        public DateTime IssueDate { get; set; }
+        public DateTime ReturnDate { get; set; }
         public string ReturnMark { get; set; }
         public long EmpId { get; set; }
         public long ReadId { get; set; }
