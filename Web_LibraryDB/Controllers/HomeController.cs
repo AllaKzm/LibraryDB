@@ -5,9 +5,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Web_LibraryDB.Models;
+using Web_libraryDB.Models;
 
-namespace Web_LibraryDB.Controllers
+namespace Web_libraryDB.Controllers
 {
     public class HomeController : Controller
     {

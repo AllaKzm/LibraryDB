@@ -1,6 +1,6 @@
 using System;
 
-namespace Web_LibraryDB.Models
+namespace Web_libraryDB.Models
 {
     public class ErrorViewModel
     {
