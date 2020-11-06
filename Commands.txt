@@ -1,0 +1,4 @@
+dotnet tool install -g dotnet-aspnet-codegenerator
+dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
+dotnet aspnet-codegenerator controller -name PositionController -outDir Controllers
+dotnet aspnet-codegenerator view Index Empty -udl -outDir Views/Position

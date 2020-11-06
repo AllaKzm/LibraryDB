@@ -11,7 +11,7 @@ namespace LibraryDB.Migrations
                 name: "Genres",
                 columns: table => new
                 {
-                    GenID = table.Column<int>(type: "INT", nullable: false),
+                    GenID = table.Column<long>(type: "INT", nullable: false),
                     GenTitle = table.Column<string>(type: "VARCHAR(50)", nullable: false),
                     Description = table.Column<string>(type: "VARCHAR(50)", nullable: false)
                 },
@@ -24,7 +24,7 @@ namespace LibraryDB.Migrations
                 name: "Positions",
                 columns: table => new
                 {
-                    ID = table.Column<int>(type: "INT", nullable: false),
+                    ID = table.Column<long>(type: "INT", nullable: false),
                     PositionTitle = table.Column<string>(type: "VARCHAR(50)", nullable: false),
                     Salary = table.Column<double>(type: "FLOAT", nullable: false),
                     Duties = table.Column<string>(type: "VARCHAR(50)", nullable: false),
@@ -39,7 +39,7 @@ namespace LibraryDB.Migrations
                 name: "Publicist",
                 columns: table => new
                 {
-                    ID = table.Column<int>(type: "INT", nullable: false),
+                    ID = table.Column<long>(type: "INT", nullable: false),
                     PublicistTitle = table.Column<string>(type: "VARCHAR(50)", nullable: false),
                     City = table.Column<string>(type: "VARCHAR(50)", nullable: false),
                     Address = table.Column<string>(type: "VARCHAR(50)", nullable: false)
@@ -53,7 +53,7 @@ namespace LibraryDB.Migrations
                 name: "Readers",
                 columns: table => new
                 {
-                    ReadID = table.Column<int>(type: "INT", nullable: false),
+                    ReadID = table.Column<long>(type: "INT", nullable: false),
                     Name = table.Column<string>(type: "VARCHAR(50)", nullable: false),
                     BirthDate = table.Column<DateTime>(type: "DateTime", nullable: false),
                     Gender = table.Column<string>(type: "CHAR(5)", nullable: false),
@@ -70,13 +70,13 @@ namespace LibraryDB.Migrations
                 name: "Employee",
                 columns: table => new
                 {
-                    EmpID = table.Column<int>(type: "INT", nullable: false),
+                    EmpID = table.Column<long>(type: "INT", nullable: false),
                     Name = table.Column<string>(type: "VARCHAR(50)", nullable: false),
                     BirthDate = table.Column<DateTime>(type: "DateTime", nullable: false),
                     Gender = table.Column<string>(type: "CHAR(5)", nullable: false),
                     Address = table.Column<string>(type: "VARCHAR(50)", nullable: false),
                     Phone = table.Column<string>(type: "VARCHAR(11)", nullable: false),
-                    ID = table.Column<int>(type: "INT", nullable: false)
+                    ID = table.Column<long>(type: "INT", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -93,12 +93,12 @@ namespace LibraryDB.Migrations
                 name: "Books",
                 columns: table => new
                 {
-                    BookID = table.Column<int>(type: "INT", nullable: false),
+                    BookID = table.Column<long>(type: "INT", nullable: false),
                     BookTitle = table.Column<string>(type: "VARCHAR(50)", nullable: false),
                     Author = table.Column<string>(type: "VARCHAR(50)", nullable: false),
                     PubYear = table.Column<DateTime>(type: "DateTime", nullable: false),
-                    GenID = table.Column<int>(type: "INT", nullable: false),
-                    ID = table.Column<int>(type: "INT", nullable: false)
+                    GenID = table.Column<long>(type: "INT", nullable: false),
+                    ID = table.Column<long>(type: "INT", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -124,9 +124,9 @@ namespace LibraryDB.Migrations
                     ReturnMark = table.Column<string>(type: "CHAR (5)", nullable: false),
                     IssueDate = table.Column<DateTime>(type: "DateTime", nullable: false),
                     ReturnDate = table.Column<DateTime>(type: "DateTime", nullable: false),
-                    EmpID = table.Column<int>(type: "INT", nullable: false),
-                    ReadID = table.Column<int>(type: "INT", nullable: false),
-                    BookID = table.Column<int>(type: "INT", nullable: false)
+                    EmpID = table.Column<long>(type: "INT", nullable: false),
+                    ReadID = table.Column<long>(type: "INT", nullable: false),
+                    BookID = table.Column<long>(type: "INT", nullable: false)
                 },
                 constraints: table =>
                 {

@@ -3,7 +3,6 @@ using System;
 using LibraryDB.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace LibraryDB.Migrations
@@ -15,13 +14,11 @@ namespace LibraryDB.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.8")
-                .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                .HasAnnotation("ProductVersion", "3.1.9");
 
             modelBuilder.Entity("LibraryDB.Models.Books", b =>
                 {
-                    b.Property<int>("BookId")
+                    b.Property<long>("BookId")
                         .HasColumnName("BookID")
                         .HasColumnType("INT");
 
@@ -33,11 +30,11 @@ namespace LibraryDB.Migrations
                         .IsRequired()
                         .HasColumnType("VARCHAR(50)");
 
-                    b.Property<int>("GenId")
+                    b.Property<long>("GenId")
                         .HasColumnName("GenID")
                         .HasColumnType("INT");
 
-                    b.Property<int>("Id")
+                    b.Property<long>("Id")
                         .HasColumnName("ID")
                         .HasColumnType("INT");
 
@@ -55,7 +52,7 @@ namespace LibraryDB.Migrations
 
             modelBuilder.Entity("LibraryDB.Models.Employee", b =>
                 {
-                    b.Property<int>("EmpId")
+                    b.Property<long>("EmpId")
                         .HasColumnName("EmpID")
                         .HasColumnType("INT");
 
@@ -70,7 +67,7 @@ namespace LibraryDB.Migrations
                         .IsRequired()
                         .HasColumnType("CHAR(5)");
 
-                    b.Property<int>("Id")
+                    b.Property<long>("Id")
                         .HasColumnName("ID")
                         .HasColumnType("INT");
 
@@ -91,7 +88,7 @@ namespace LibraryDB.Migrations
 
             modelBuilder.Entity("LibraryDB.Models.Genres", b =>
                 {
-                    b.Property<int>("GenId")
+                    b.Property<long>("GenId")
                         .HasColumnName("GenID")
                         .HasColumnType("INT");
 
@@ -113,18 +110,18 @@ namespace LibraryDB.Migrations
                     b.Property<string>("ReturnMark")
                         .HasColumnType("CHAR (5)");
 
-                    b.Property<int>("BookId")
+                    b.Property<long>("BookId")
                         .HasColumnName("BookID")
                         .HasColumnType("INT");
 
-                    b.Property<int>("EmpId")
+                    b.Property<long>("EmpId")
                         .HasColumnName("EmpID")
                         .HasColumnType("INT");
 
                     b.Property<DateTime>("IssueDate")
                         .HasColumnType("DateTime");
 
-                    b.Property<int>("ReadId")
+                    b.Property<long>("ReadId")
                         .HasColumnName("ReadID")
                         .HasColumnType("INT");
 
@@ -144,7 +141,7 @@ namespace LibraryDB.Migrations
 
             modelBuilder.Entity("LibraryDB.Models.Positions", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<long>("Id")
                         .HasColumnName("ID")
                         .HasColumnType("INT");
 
@@ -170,7 +167,7 @@ namespace LibraryDB.Migrations
 
             modelBuilder.Entity("LibraryDB.Models.Publicist", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<long>("Id")
                         .HasColumnName("ID")
                         .HasColumnType("INT");
 
@@ -193,7 +190,7 @@ namespace LibraryDB.Migrations
 
             modelBuilder.Entity("LibraryDB.Models.Readers", b =>
                 {
-                    b.Property<int>("ReadId")
+                    b.Property<long>("ReadId")
                         .HasColumnName("ReadID")
                         .HasColumnType("INT");
 
