@@ -1,0 +1,59 @@
+﻿@model IEnumerable<LibraryDB.Models.IssuedBooks>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.IssueDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReturnDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Book)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Emp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Read)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IssueDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReturnDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Book.Author)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Emp.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Read.Address)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ReturnMark">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ReturnMark">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ReturnMark">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
